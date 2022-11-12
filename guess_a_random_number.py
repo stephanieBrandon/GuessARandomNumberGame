@@ -12,7 +12,7 @@ def win_stats():
     global games_played
     global games_lost
     print(f"You have won {winScore} games and played a total of {games_played} games with your win percentage  currently being %{winScore/games_played:.2f}")
-    resetScore = input("Would you like to reset the record of your games won/lost?")
+    resetScore = input("Would you like to reset the record of your games won/lost? (y/n) ")
     if resetScore == 'y':
         winScore = 0
         games_lost = 0
@@ -34,7 +34,7 @@ while(True):
         games_lost +=1
     games_played+=1
     win_stats()
-    play_again = input("Would you like to play again?")
+    play_again = input("Would you like to play again? (y/n)")
     if play_again == "n":
         print("Thanks for playing")
         break
